@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+      <meta charset="UTF-8">
+      <meta name="description" content="Proejkt RAIM/HIED">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="Kajetan Kubicz, Agnieszka Blok, Renata Bańka">
+      <script type="text/javascript" src="{{ url_for('static', filename='js/back.js')}}"></script>
+  <title>Projekt RAIM/HIED_Test</title>
+  </head>
+  <body>
+    <header class="title">
+	   <h1>How <span class="color-title">fast</span> are you?</h1>
+	  </header>
+
+    <div class="wrapper">
+      <h2>First of all, I need from you some basic data</h2>
+
+      <form method="POST" id="form">
+        <p>
+        <label class="head-label">Gender:</label><br>
+        <label>
+          <input type="radio" name="gender" value="men" required>
+           Men
+        </label>
+        <label>
+          <input type="radio" name="gender" value="women" required>
+          Women
+        </label>
+      </p>
+        <p>
+      <label class="head-label">Age:</label><br>
+      <input type="number" min="8" max="110" name="age" required>
+    </p>
+        <p>
+          <label class="head-label">Lifestyle:</label><br>
+          <label>
+            <input type="radio" name="lifestyle" value="active" required>
+             Active
+          </label>
+          <label>
+            <input type="radio" name="lifestyle" value="sedentary" required>
+            Sedentary
+          </label>
+        </p>
+        <p>
+          <label class="head-label">Fatigue level (at the time of the test):</label><br>
+            <input type="radio" name="fatigue" value="1" required>
+            <label for="1"> 1 (very tired)</label><br>
+            <input type="radio" name="fatigue" value="2" required>
+            <label for="2"> 2</label><br>
+            <input type="radio" name="fatigue" value="3" required>
+            <label for="3"> 3</label><br>
+            <input type="radio" name="fatigue" value="4" required>
+            <label for="4"> 4</label><br>
+            <input type="radio" name="fatigue" value="5" required>
+            <label for="5"> 5 (well rested)</label><br>
+        </p>
+        <p>
+          <label class="head-label">Stress level (at the time of the test):</label><br>
+            <input type="radio" name="stress" value="1" required >
+            <label for="1"> 1 (very stressed)</label><br>
+            <input type="radio" name="stress" value="2" required>
+            <label for="2"> 2</label><br>
+            <input type="radio" name="stress" value="3" required>
+            <label for="3"> 3</label><br>
+            <input type="radio" name="stress" value="4" required>
+            <label for="4"> 4</label><br>
+            <input type="radio" name="stress" value="5" required>
+            <label for="5"> 5 (relaxed)</label><br>
+        </p>
+        <p>
+          <label class="head-label">Health:</label><br>
+          <textarea name="health" rows="2" cols="50" placeholder="Do you have any health problems?"></textarea>
+        </p>
+        <p>
+          <label class="head-label">Do you have a color vision disorder?:</label><br>
+          <label>
+            <input type="radio" name="color" value="yes" required>
+             Yes
+          </label>
+          <label>
+            <input type="radio" name="color" value="no" required>
+            No
+          </label>
+        </p>
+        <p>
+      <label class="head-label">How much time do you spend in front of the computer:</label><br>
+        <input type="radio" name="computer" value="<1" required>
+        <label for="1"> Under an hour</label><br>
+        <input type="radio" name="computer" value="2-3" required>
+        <label for="2"> 2-3 hours</label><br>
+        <input type="radio" name="computer" value="3-5" required>
+        <label for="3"> 3-5 hours</label><br>
+        <input type="radio" name="computer" value="5-10" required>
+        <label for="4"> 5-10 hours</label><br>
+        <input type="radio" name="computer" value=">12" required>
+        <label for="5"> Over 12 hours</label><br>
+    </p>
+        <p>
+          <label class="head-label">proficiency in solving perceptual tasks:</label><br>
+            <input type="radio" name="perceptual" value="1" required>
+            <label for="1"> 1 (none)</label><br>
+            <input type="radio" name="perceptual" value="2" required>
+            <label for="2"> 2</label><br>
+            <input type="radio" name="perceptual" value="3" required>
+            <label for="3"> 3</label><br>
+            <input type="radio" name="perceptual" value="4" required>
+            <label for="4"> 4</label><br>
+            <input type="radio" name="perceptual" value="5" required>
+            <label for="5"> 5 (experienced)</label><br>
+        </p>
+        <p>
+          <label class="head-label">experience in computer games:</label><br>
+            <input type="radio" name="computer_experience" value="1" required>
+            <label for="1"> 1 (none)</label><br>
+            <input type="radio" name="computer_experience" value="2" required>
+            <label for="2"> 2</label><br>
+            <input type="radio" name="computer_experience" value="3" required>
+            <label for="3"> 3</label><br>
+            <input type="radio" name="computer_experience" value="4" required>
+            <label for="4"> 4</label><br>
+            <input type="radio" name="computer_experience" value="5" required>
+            <label for="5"> 5 (experienced)</label><br>
+        </p>
+        <p>
+          <label class="head-label">frequency of using electronic devices:</label><br>
+            <input type="radio" name="electronic_devices" value="1" required>
+            <label for="1"> 1 (none)</label><br>
+            <input type="radio" name="electronic_devices" value="2" required>
+            <label for="2"> 2</label><br>
+            <input type="radio" name="electronic_devices" value="3" required>
+            <label for="3"> 3</label><br>
+            <input type="radio" name="electronic_devices" value="4" required>
+            <label for="4"> 4</label><br>
+            <input type="radio" name="electronic_devices" value="5" required>
+            <label for="5"> 5 (a lot)</label><br>
+        </p>
+        <p>
+          <label class="head-label">level of physical activity:</label><br>
+            <input type="radio" name="physical_activity" value="1" required>
+            <label for="1"> 1 (inactive)</label><br>
+            <input type="radio" name="physical_activity" value="2" required>
+            <label for="2"> 2</label><br>
+            <input type="radio" name="physical_activity" value="3" required>
+            <label for="3"> 3</label><br>
+            <input type="radio" name="physical_activity" value="4" required>
+            <label for="4"> 4</label><br>
+            <input type="radio" name="physical_activity" value="5" required>
+            <label for="5"> 5 (active)</label><br>
+        </p>
+        <p>
+          <label class="head-label">caffeine consumption:</label><br>
+            <input type="radio" name="caffeine" value="1" required>
+            <label for="1"> 1 (none)</label><br>
+            <input type="radio" name="caffeine" value="2" required>
+            <label for="2"> 2</label><br>
+            <input type="radio" name="caffeine" value="3" required>
+            <label for="3"> 3</label><br>
+            <input type="radio" name="caffeine" value="4" required>
+            <label for="4"> 4</label><br>
+            <input type="radio" name="caffeine" value="5" required>
+            <label for="5"> 5 (a lot)</label><br>
+        </p>
+        <p>
+          <label class="head-label">How much time do you sleep:</label><br>
+            <input type="radio" name="sleep" value="2-3" required>
+            <label for="2"> 2-3 hours</label><br>
+            <input type="radio" name="sleep" value="3-5" required>
+            <label for="3"> 3-5 hours</label><br>
+            <input type="radio" name="sleep" value="5-10" required>
+            <label for="4"> 5-10 hours</label><br>
+            <input type="radio" name="sleep" value=">12" required>
+            <label for="5"> Over 12 hours</label><br>
+        </p>
+        <input type="submit" value="Submit your answers">
+      </form>
+    </div>
+
+
+
+  </body>
+</html>

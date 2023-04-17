@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+      <script type="text/javascript" src="{{ url_for('static', filename='js/test2.js')}}"></script>
+      <meta charset="UTF-8">
+      <meta name="description" content="Proejkt RAIM/HIED">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="Kajetan Kubicz, Agnieszka Blok, Renata Bańka">
+      <script type="text/javascript" src="{{ url_for('static', filename='js/back.js')}}"></script>
+
+  <title>Projekt RAIM/HIED</title>
+  </head>  
+  <body>
+    <header class="title">
+	   <h1>let's start <span class="color-title">second</span> test</h1>
+	  </header>
+
+    <div id="wrapper">
+        <img class="test-photo " src="{{ url_for('static', filename='jpgs_test2/photo.png') }}">
+
+        <h2>Choose an answer:</h2>
+
+        <form class="test-form" method="POST" >
+            <div class="test-answer">
+                <img src="{{ url_for('static', filename='jpgs_test2/answer1.png') }}" >
+
+                <label>
+                    <input type="radio" name="answer" value="1" required>
+                </label>
+            </div>
+
+
+            <div class="test-answer">
+                <img src="{{ url_for('static', filename='jpgs_test2/answer2.png') }}">
+
+                <label>
+                    <input type="radio" name="answer" value="2" required>
+                </label>
+            </div>
+
+
+            <div class="test-answer">
+              <img src="{{ url_for('static', filename='jpgs_test2/answer3.png') }}">
+
+                <label>
+                    <input type="radio" name="answer" value="3" required>
+                </label>
+            </div>
+
+
+            <div class="test-answer">
+                <img src="{{ url_for('static', filename='jpgs_test2/answer4.png') }}">
+
+                <label>
+                    <input type="radio" name="answer" value="4" required>
+                </label>
+            </div>
+
+            <a href="/4" class="sub-btn">
+                <input type="submit" value="Submit your answer">
+            </a>
+        </form>
+
+    </div>
+
+  </body>
+</html>

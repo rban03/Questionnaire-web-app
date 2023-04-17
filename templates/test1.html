@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+      <meta charset="UTF-8">
+      <meta name="description" content="Proejkt RAIM/HIED">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="Kajetan Kubicz, Agnieszka Blok, Renata Bańka">
+        <script type="text/javascript" src="{{ url_for('static', filename='js/back.js')}}"></script>
+  <title>Projekt RAIM/HIED</title>
+  </head>
+  <body>
+    <header class="title">
+	   <h1>let's start <span class="color-title">first</span> test</h1>
+    </header>
+
+    <div class="wrapper">
+        <h2>The test is designed to check your reaction time to green</h2>
+        <h2>When you see the green color click on the button (you have to click 3 times if the color appears)</h2>
+        <h2>Better not to spam the button because it will be disabled for a few seconds</h2>
+        <div id="kwadrat"></div>
+        <button id="przycisk">Click me when you see a green square</button>
+        <div id="czas-reakcji">
+
+        </div>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/test1.js')}}"></script>
+    </div>
+
+    <a href="/3">
+      <div class="pic">
+        <div class="button"></div>
+      </div>
+    </a>
+
+  </body>
+</html>
